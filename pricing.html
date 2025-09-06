@@ -1,66 +1,80 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pricing — NovaFrame</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Pricing — Jesis Bhattarai</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="whatsapp-fab" href="https://wa.me/9779800000000" target="_blank" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M20.52 3.48A11.9 11.9 0 0012 .5 11.9 11.9 0 003.48 3.48 12 12 0 001.1 14.9L1 18l3.2-.84A11.94 11.94 0 0012 23.5c3.18 0 6.15-1.24 8.39-3.48A11.9 11.9 0 0023.5 12 11.9 11.9 0 0020.52 3.48z"></path></svg>
-  </a>
-
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">NovaFrame</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html#about">About</a>
-        <a href="index.html#albums">Albums</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="42" font-family="Georgia, serif" dy=".3em">J</text>
+        </svg>
+        <span class="logo-text">Jesis Bhattarai</span>
+      </a>
     </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="gears.html">Gears</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
   </header>
 
-  <main class="container section">
-    <div class="section-head">
-      <h2>Pricing</h2>
-      <p>Simple, transparent packages — tailored for weddings, portraits and brands.</p>
-    </div>
+  <main class="container">
+    <section class="pricing glass">
+      <h1>Pricing</h1>
+      <p>All packages include professional editing and optional albums. Prices vary depending on event scope.</p>
 
-    <div class="pricing-grid">
-      <div class="price-card glass">
-        <h3>Essentials</h3>
-        <p class="price">Rs 35,000</p>
-        <ul><li>4 hours coverage</li><li>Online gallery</li><li>20 edited images</li></ul>
-        <a class="btn primary" href="mailto:you@example.com">Book Essentials</a>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Basic Day</h3>
+          <p class="price">₨ 55,000</p>
+          <ul>
+            <li>Full day coverage (8 hrs)</li>
+            <li>Edited digital gallery</li>
+            <li>1 photographer</li>
+          </ul>
+          <a class="btn" href="contact.html">Book</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Standard Event</h3>
+          <p class="price">₨ 90,000</p>
+          <ul>
+            <li>Extended coverage</li>
+            <li>Advanced editing</li>
+            <li>Optional album (extra)</li>
+          </ul>
+          <a class="btn" href="contact.html">Book</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Premium</h3>
+          <p class="price">₨ 150,000</p>
+          <ul>
+            <li>Multi-day / full event</li>
+            <li>Albums included</li>
+            <li>2 photographers & video</li>
+          </ul>
+          <a class="btn" href="contact.html">Book</a>
+        </div>
       </div>
 
-      <div class="price-card glass featured">
-        <h3>Signature</h3>
-        <p class="price">Rs 75,000</p>
-        <ul><li>8 hours coverage</li><li>Priority editing</li><li>Custom album</li></ul>
-        <a class="btn primary" href="mailto:you@example.com">Book Signature</a>
-      </div>
-
-      <div class="price-card glass">
-        <h3>Full Day</h3>
-        <p class="price">Rs 120,000</p>
-        <ul><li>Full-day coverage</li><li>Second shooter</li><li>Complimentary prints</li></ul>
-        <a class="btn primary" href="mailto:you@example.com">Book Full Day</a>
-      </div>
-    </div>
+      <p class="note">Prices shown are starting ranges — final quote depends on scope and extra services.</p>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> NovaFrame — All rights reserved.</p>
-    </div>
+  <footer class="site-footer glass">
+    <p>© <span id="year4"></span> Jesis Bhattarai</p>
   </footer>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

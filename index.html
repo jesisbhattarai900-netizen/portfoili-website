@@ -1,117 +1,89 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NovaFrame — Wedding & Lifestyle Photographer</title>
-  <meta name="description" content="Professional wedding & lifestyle photography — albums, pricing and contact." />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Jesis Bhattarai — Photographer</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="whatsapp-fab" href="https://wa.me/9779800000000" target="_blank" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M20.52 3.48A11.9 11.9 0 0012 .5 11.9 11.9 0 003.48 3.48 12 12 0 001.1 14.9L1 18l3.2-.84A11.94 11.94 0 0012 23.5c3.18 0 6.15-1.24 8.39-3.48A11.9 11.9 0 0023.5 12 11.9 11.9 0 0020.52 3.48z"></path></svg>
-  </a>
-
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">NovaFrame</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#albums">Albums</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="logo">
+      <!-- Simple SVG logo + name: replace colors or SVG as you wish -->
+      <a href="index.html" class="logo-link">
+        <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="42" font-family="Georgia, serif" dy=".3em">J</text>
+        </svg>
+        <span class="logo-text">Jesis Bhattarai</span>
+      </a>
     </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="gears.html">Gears</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Timeless <span class="accent">Wedding</span> & Lifestyle Photography</h1>
-          <p class="lead">Cinematic storytelling, subtle direction, and thoughtful design — images that last a lifetime.</p>
-          <p class="actions"><a class="btn primary" href="#albums">View Albums</a> <a class="btn ghost" href="pricing.html">Pricing</a></p>
+  <main class="container">
+    <section class="hero glass">
+      <h1>Hello — I'm <span class="accent">Jesis Bhattarai</span></h1>
+      <p class="lead">Wedding & Event Photographer — capturing real moments with cinematic style.</p>
+      <div class="hero-grid">
+        <div class="card">
+          <h3>About me</h3>
+          <p>I'm a Nepal-based photographer specializing in wedding and event storytelling. I focus on emotion, light, and candid moments.</p>
         </div>
-        <div class="hero-image" aria-hidden="true">
-          <img src="assets/placeholder-hero.jpg" alt="Hero sample">
+        <div class="card">
+          <h3>My Experience</h3>
+          <p>Over X years of shooting events across Nepal. Worked with diverse clients and adapted to all venues and lighting conditions.</p>
         </div>
+        <div class="card">
+          <h3>Working Style</h3>
+          <p>Documentary approach blended with cinematic lighting — unobtrusive, attentive, and detail-oriented.</p>
+        </div>
+        <div class="card">
+          <h3>Qualities</h3>
+          <ul>
+            <li>Reliable & punctual</li>
+            <li>Professional editing workflow</li>
+            <li>Friendly with clients and guests</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="gallery.html">View Gallery</a>
+        <a class="btn outline" href="pricing.html">See Prices</a>
       </div>
     </section>
 
-    <section id="about" class="section container">
-      <div class="about-grid glass">
-        <div>
-          <h2>About Jesis</h2>
-          <p>Documentary heart, editorial polish. I shoot moments that feel honest and images that look iconic. Based in Nepal; available worldwide.</p>
-          <ul class="meta-list"><li>Full-day wedding coverage</li><li>Editorial portrait sessions</li><li>Albums, prints & retouching</li></ul>
-        </div>
-        <div class="about-image">
-          <img src="assets/placeholder-1.jpg" alt="About portrait">
-        </div>
-      </div>
-    </section>
-
-    <section id="albums" class="section container">
-      <div class="section-head">
-        <h2>Albums</h2>
-        <p>Select a collection to explore the full gallery.</p>
-      </div>
-
-      <div class="albums-grid">
-        <article class="album-card">
-          <a href="albums/wedding.html" class="cover-link">
-            <img src="assets/placeholder-1.jpg" alt="Wedding cover">
-            <div class="overlay">
-              <h3>Wedding Stories</h3>
-              <p class="small">Full-day coverage, editorial & documentary</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="album-card">
-          <a href="albums/portrait.html" class="cover-link">
-            <img src="assets/placeholder-5.jpg" alt="Portrait cover">
-            <div class="overlay">
-              <h3>Portrait Sessions</h3>
-              <p class="small">Editorial portraits and personal branding</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="album-card">
-          <a href="albums/travel.html" class="cover-link">
-            <img src="assets/placeholder-3.jpg" alt="Travel cover">
-            <div class="overlay">
-              <h3>Travel & Editorial</h3>
-              <p class="small">Minimal landscapes and travel stories</p>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="section container">
-      <div class="contact-panel glass">
-        <h2>Let’s work together</h2>
-        <p>Tell me about your project and I'll send a tailored proposal.</p>
-        <form id="contactForm" class="contact-form" action="#" method="post" onsubmit="return false;">
-          <div class="row"><input name="name" placeholder="Full name" required><input name="email" placeholder="Email address" required></div>
-          <input name="subject" placeholder="Subject (wedding, portrait, etc.)" required>
-          <textarea name="message" placeholder="Tell me about your day..." rows="6" required></textarea>
-          <div class="row between"><button class="btn primary" type="submit">Send inquiry</button><a class="btn ghost" href="mailto:you@example.com">Email</a></div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> NovaFrame — All rights reserved.</p>
+    <section class="info glass small">
+  <h2>Featured Work</h2>
+  <div class="featured-grid">
+    <div class="featured-item">
+      <img src="assets/featured/feat1.jpg" alt="Featured Work 1">
     </div>
+    <div class="featured-item">
+      <img src="assets/featured/feat2.jpg" alt="Featured Work 2">
+    </div>
+    <div class="featured-item">
+      <img src="assets/featured/feat3.jpg" alt="Featured Work 3">
+    </div>
+    <div class="featured-item">
+      <img src="assets/featured/feat4.jpg" alt="Featured Work 4">
+    </div>
+  </div>
+</section>
+
+
+  <footer class="site-footer glass">
+    <p>© <span id="year"></span> Jesis Bhattarai • All rights reserved • <a href="contact.html">Contact</a></p>
   </footer>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

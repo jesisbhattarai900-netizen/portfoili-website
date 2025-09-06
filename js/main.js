@@ -1,90 +1,96 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Footer year update
+  ['year','year2','year3','year4','year5'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.textContent = new Date().getFullYear();
+  });
 
-/* Global interactions for the site */
-(function(){
-  // set year
-  var y = document.getElementById('year');
-  if(y) y.textContent = new Date().getFullYear();
+  // Albums definition (album folder => display name)
+  const albums = {
+    wedding: "Wedding",
+    prewedding: "Pre-wedding",
+    birthday: "Birthday",
+    corporate: "Corporate"
+  };
 
-  // Reveal animations (simple)
-  var reveals = document.querySelectorAll('.section, .glass, .album-card, .gallery-item');
-  function reveal(){
-    for(var i=0;i<reveals.length;i++){
-      var r = reveals[i];
-      var rect = r.getBoundingClientRect();
-      if(rect.top < (window.innerHeight - 60)) r.classList.add('visible');
-    }
-  }
-  window.addEventListener('scroll', reveal);
-  window.addEventListener('load', reveal);
-  reveal();
+  // Each album has images named cover.jpg and img1.jpg ... img10.jpg
+  const albumGrid = document.getElementById('albumGrid');
+  const lightbox = document.getElementById('lightbox');
+  const track = document.getElementById('track');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const lbClose = document.getElementById('lbClose');
 
-  // Gallery Lightbox slider
-  var lightbox = document.getElementById('galleryLightbox');
-  var lbImg = document.getElementById('lbImage');
-  var lbCaption = document.getElementById('lbCaption');
-  var closeBtn = document.querySelector('.lb-close');
-  var prevBtn = document.querySelector('.lb-prev');
-  var nextBtn = document.querySelector('.lb-next');
-  var galleryNodes = [];
-  var currentIndex = 0;
+  let currentAlbum = null;
+  let currentIndex = 0;
+  let albumImages = [];
 
-  function collectGallery(){
-    var gallery = document.getElementById('gallery');
-    if(!gallery) return;
-    var items = gallery.querySelectorAll('.gallery-item');
-    galleryNodes = Array.prototype.slice.call(items);
-    galleryNodes.forEach(function(btn, idx){
-      btn.addEventListener('click', function(){
-        openLightbox(idx);
-      });
+  if(albumGrid){
+    Object.entries(albums).forEach(([folder, title]) => {
+      const card = document.createElement('div');
+      card.className = 'album-card';
+      card.innerHTML = `
+        <div class="album-cover">
+          <img src="assets/gallery/${folder}/cover.jpg" alt="${title} cover">
+          <div class="album-title">${title}</div>
+        </div>
+      `;
+      card.addEventListener('click', () => openAlbum(folder, title));
+      albumGrid.appendChild(card);
     });
   }
 
-  function openLightbox(idx){
-    if(!galleryNodes.length) return;
-    currentIndex = idx;
-    var node = galleryNodes[currentIndex];
-    var src = node.getAttribute('data-src');
-    var caption = node.getAttribute('data-caption') || '';
-    lbImg.src = src;
-    lbImg.alt = caption;
-    lbCaption.textContent = caption;
-    lightbox.classList.add('active');
+  function openAlbum(folder, title){
+    currentAlbum = folder;
+    albumImages = [];
+    for(let i=1; i<=10; i++){
+      albumImages.push(`assets/gallery/${folder}/img${i}.jpg`);
+    }
+    openLightbox(0);
+  }
+
+  function openLightbox(startIndex){
     lightbox.setAttribute('aria-hidden','false');
+    renderSlides(startIndex);
+    track.focus();
+  }
+
+  function renderSlides(startIndex){
+    track.innerHTML = '';
+    albumImages.forEach((src,i) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = "Photo " + (i+1);
+      img.style.display = i===startIndex ? 'block':'none';
+      track.appendChild(img);
+    });
+    currentIndex = startIndex;
   }
 
   function closeLightbox(){
-    lightbox.classList.remove('active');
     lightbox.setAttribute('aria-hidden','true');
-    lbImg.src = '';
+    track.innerHTML = '';
   }
 
-  function showNext(n){
-    if(!galleryNodes.length) return;
-    currentIndex = (currentIndex + 1 + n) % galleryNodes.length;
-    var node = galleryNodes[currentIndex];
-    lbImg.src = node.getAttribute('data-src');
-    lbCaption.textContent = node.getAttribute('data-caption') || '';
-  }
-
-  if(closeBtn) closeBtn.addEventListener('click', closeLightbox);
-  if(prevBtn) prevBtn.addEventListener('click', function(){ showNext(-1); });
-  if(nextBtn) nextBtn.addEventListener('click', function(){ showNext(1); });
-  // keyboard
-  document.addEventListener('keydown', function(e){
-    if(!lightbox || !lightbox.classList.contains('active')) return;
-    if(e.key === 'Escape') closeLightbox();
-    if(e.key === 'ArrowRight') showNext(1);
-    if(e.key === 'ArrowLeft') showNext(-1);
-  });
-
-  // click outside to close
-  if(lightbox){
-    lightbox.addEventListener('click', function(e){
-      if(e.target === lightbox) closeLightbox();
+  function show(i){
+    if(i < 0) i = albumImages.length-1;
+    if(i >= albumImages.length) i = 0;
+    const imgs = track.querySelectorAll('img');
+    imgs.forEach((img,idx)=>{
+      img.style.display = idx===i ? 'block':'none';
     });
+    currentIndex = i;
   }
 
-  // init per page
-  collectGallery();
-})();
+  if(prev) prev.addEventListener('click', () => show(currentIndex-1));
+  if(next) next.addEventListener('click', () => show(currentIndex+1));
+  if(lbClose) lbClose.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if(lightbox.getAttribute('aria-hidden') === 'false'){
+      if(e.key==='ArrowLeft') show(currentIndex-1);
+      if(e.key==='ArrowRight') show(currentIndex+1);
+      if(e.key==='Escape') closeLightbox();
+    }
+  });
+});

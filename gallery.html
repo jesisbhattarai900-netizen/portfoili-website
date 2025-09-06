@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — Jesis Bhattarai</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="42" font-family="Georgia, serif" dy=".3em">J</text>
+        </svg>
+        <span class="logo-text">Jesis Bhattarai</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="gears.html">Gears</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="gallery-hero glass">
+      <h1>Gallery Albums</h1>
+      <p>Choose an album to explore photos. Replace album images inside <code>/assets/gallery/[album-name]/</code>.</p>
+
+      <div class="album-grid" id="albumGrid">
+        <!-- JS generates albums -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav left" id="prev" aria-label="Previous">‹</button>
+    <div class="lightbox-track" id="track" tabindex="0"></div>
+    <button class="lightbox-nav right" id="next" aria-label="Next">›</button>
+  </div>
+
+  <footer class="site-footer glass">
+    <p>© <span id="year2"></span> Jesis Bhattarai</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* Featured Work Section */
+.featured {
+  padding: 60px 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.featured h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.featured-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.featured-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+.featured-item:hover img {
+  transform: scale(1.1);
+}
+.lightbox-track img {
+  max-width: 90%;
+  max-height: 90vh;
+  margin: auto;
+  display: none;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.gear-card {
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gear-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.gear-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+.contact {
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-info a {
+  color: #e0f0ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+/* Glassmorphism portfolio CSS - simple to edit.
+   Replace gallery images in /assets/gallery/ (cover.jpg and img1.jpg ... img10.jpg).
+   Replace gear images in /assets/gears/ (camera.jpg gimbal.jpg davinci.jpg photoshop.jpg lightroom.jpg premiere.jpg)
+*/
+:root{
+  --navy:#021028;
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --accent: #2dd4bf;
+  --max-width:1100px;
+  --radius:14px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  min-height:100%;
+  background: radial-gradient(1200px 500px at 10% 10%, rgba(45,212,191,0.06), transparent),
+              linear-gradient(180deg, rgba(2,16,40,1) 0%, rgba(2,24,48,1) 100%);
+  color:#eaf6ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding-bottom:80px;
+}
+
+/* header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px 28px;
+  max-width:var(--max-width);
+  margin:16px auto;
+  width:calc(100% - 40px);
+}
+.logo-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo-text{font-weight:700;letter-spacing:0.3px}
+.nav{display:flex;gap:16px;align-items:center}
+.nav a{text-decoration:none;padding:8px 12px;border-radius:10px;color:inherit;opacity:0.95}
+.nav a.cta{background:linear-gradient(90deg,var(--accent),#60a5fa); color:#021028; font-weight:700}
+.nav a:hover{transform:translateY(-2px)}
+
+/* container */
+.container{max-width:var(--max-width);margin:18px auto;padding:20px;}
+
+/* glass base */
+.glass{
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  padding:18px;
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 6px 30px rgba(2,10,20,0.45);
+}
+
+/* hero */
+.hero{padding:40px}
+.hero h1{margin:0;font-size:34px}
+.hero .accent{color:var(--accent)}
+.lead{opacity:0.92}
+.hero-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+.card{padding:12px}
+.actions{margin-top:18px;display:flex;gap:12px}
+.btn{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#021028;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.08);color:inherit}
+
+/* small glass */
+.small{padding:14px}
+
+/* footer */
+.site-footer{max-width:var(--max-width);margin:24px auto;padding:14px;text-align:center;color:rgba(255,255,255,0.7)}
+
+/* gallery */
+.gallery-hero{text-align:center}
+.cover{position:relative;display:inline-block;border-radius:12px;overflow:hidden;margin-top:12px}
+.cover img{display:block;width:600px;max-width:90vw;height:auto;object-fit:cover}
+.cover-cta{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;padding:10px 14px;border-radius:12px;background:rgba(0,0,0,0.5);color:#fff;border:1px solid rgba(255,255,255,0.06)}
+
+/* thumbs */
+.thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;justify-content:center}
+.thumb{width:140px;height:96px;overflow:hidden;border-radius:10px;border:1px solid rgba(255,255,255,0.06)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,8,18,0.6), rgba(2,8,18,0.85));z-index:9999;padding:20px}
+.lightbox[aria-hidden="false"]{display:flex}
+.lightbox-track{max-width:1100px;width:100%;height:70vh;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.lightbox-track img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;pointer-events:none}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);background:var(--glass-bg);border:1px solid var(--glass-border);padding:12px;border-radius:12px}
+.lightbox-nav.left{left:18px}
+.lightbox-nav.right{right:18px}
+.lightbox-close{position:fixed;right:18px;top:18px;background:transparent;border:0;color:#fff;font-size:20px}
+
+/* gears grid */
+.gear-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.gear-card{padding:12px;text-align:center}
+.gear-card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+
+/* pricing */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:16px}
+.price-card{padding:14px;text-align:center}
+.price{font-size:22px;font-weight:800;margin:12px 0}
+
+/* contact */
+.contact .phone{font-size:20px;font-weight:700;margin:8px 0}
+.contact-form{display:grid;gap:8px;max-width:560px}
+.contact-form input,.contact-form textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+
+/* responsive */
+@media (max-width:720px){
+  .site-header{flex-direction:column;align-items:flex-start}
+  .nav{flex-wrap:wrap}
+  .cover img{max-width:95vw}
+}
+
+.album-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.album-card{cursor:pointer;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.4)}
+.album-card img{width:100%;height:160px;object-fit:cover;display:block}
+.album-title{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:rgba(0,0,0,0.5);color:#fff;font-weight:600;text-align:center}
