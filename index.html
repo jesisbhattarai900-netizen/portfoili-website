@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaFrame — Photography Portfolio</title>
+  <meta name="description" content="Futuristic modern photography portfolio in a glassmorphism, navy-blue theme." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Ambient background orbs -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="nav glass" id="top">
+    <a class="brand" href="#top" aria-label="NovaFrame Home">
+      <span class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 3l2.7 5.47L21 9.24l-4.5 4.38L17.4 21 12 17.77 6.6 21l.9-7.38L3 9.24l6.3-.77L12 3z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="12" cy="12" r="2.6" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-text">NovaFrame</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="chip" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="hero-content glass reveal">
+        <h1>Crafting Time <span class="accent">Into Frames</span></h1>
+        <p>Hi, I’m <strong>Jesis</strong> — a modern wedding & lifestyle photographer. I blend cinematic tones with editorial minimalism to tell your story in light.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn primary">View Portfolio</a>
+          <a href="#contact" class="btn ghost">Book a Shoot</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="value">350+</span>
+            <span class="label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="value">9 yrs</span>
+            <span class="label">Experience</span>
+          </div>
+          <div class="stat">
+            <span class="value">4.9★</span>
+            <span class="label">Client Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div class="about-card glass reveal">
+          <h2>About</h2>
+          <p>I create emotive, clean, and timeless imagery. My approach is candid-first with just enough guidance so you feel natural and look iconic.</p>
+          <ul class="ticks">
+            <li>Wedding & Elopements</li>
+            <li>Portraits & Editorial</li>
+            <li>Brand & Product Stories</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Sony α7 IV</span>
+            <span class="chip">35mm • 85mm</span>
+            <span class="chip">DaVinci / Lightroom</span>
+          </div>
+        </div>
+        <div class="about-media glass reveal">
+          <div class="poster">
+            <img src="assets/placeholder-1.jpg" alt="Showcase portrait" />
+            <span class="badge">Available Worldwide</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / PORTFOLIO -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Portfolio</h2>
+          <p>A curated selection of recent work. Filter by style.</p>
+          <div class="filters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="wedding">Wedding</button>
+            <button class="chip" data-filter="portrait">Portrait</button>
+            <button class="chip" data-filter="travel">Travel</button>
+          </div>
+        </div>
+
+        <div class="grid-gallery">
+          <!-- 9 items -->
+          <figure class="card glass gallery-item reveal" data-cat="wedding">
+            <img src="assets/placeholder-1.jpg" alt="Wedding moment" />
+            <figcaption>
+              <h3>Golden Vows</h3>
+              <p>Warm ceremony light with cinematic tones.</p>
+            </figcaption>
+          </figure>
+          <figure class="card glass gallery-item reveal" data-cat="portrait">
+            <img src="assets/placeholder-2.jpg" alt="Portrait session" />
+            <figcaption>
+              <h3>Blue Hour</h3>
+              <p>Editorial portrait in soft navy hues.</p>
+            </figcaption>
+          </figure>
+          <figure class="card glass gallery-item reveal" data-cat="travel">
+            <img src="assets/placeholder-3.jpg" alt="Travel landscape" />
+            <figcaption>
+              <h3>High Pass</h3>
+              <p>Misty mountains and clean lines.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card glass gallery-item reveal" data-cat="wedding">
+            <img src="assets/placeholder-4.jpg" alt="Wedding dance" />
+            <figcaption>
+              <h3>First Dance</h3>
+              <p>Motion blur for a dreamy, romantic feel.</p>
+            </figcaption>
+          </figure>
+          <figure class="card glass gallery-item reveal" data-cat="portrait">
+            <img src="assets/placeholder-5.jpg" alt="Studio portrait" />
+            <figcaption>
+              <h3>Edge Light</h3>
+              <p>Crisp highlights, subtle grain.</p>
+            </figcaption>
+          </figure>
+          <figure class="card glass gallery-item reveal" data-cat="travel">
+            <img src="assets/placeholder-6.jpg" alt="City travel" />
+            <figcaption>
+              <h3>Neon Trails</h3>
+              <p>City glow with minimalist framing.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card glass gallery-item reveal" data-cat="wedding">
+            <img src="assets/placeholder-7.jpg" alt="Bride portrait" />
+            <figcaption>
+              <h3>Veil Light</h3>
+              <p>Soft textures, soft soul.</p>
+            </figcaption>
+          </figure>
+          <figure class="card glass gallery-item reveal" data-cat="portrait">
+            <img src="assets/placeholder-8.jpg" alt="Portrait closeup" />
+            <figcaption>
+              <h3>Gaze</h3>
+              <p>Intent and intimacy in a single frame.</p>
+            </figcaption>
+          </figure>
+          <figure class="card glass gallery-item reveal" data-cat="travel">
+            <img src="assets/placeholder-9.jpg" alt="Seascape travel" />
+            <figcaption>
+              <h3>Tide Lines</h3>
+              <p>Minimal seascape with tonal depth.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightboxImg" alt="Expanded view" />
+        <p id="lightboxCaption" class="lightbox-caption"></p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container grid-3">
+        <div class="card glass reveal">
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16v12H4z" stroke="currentColor"/><circle cx="12" cy="13" r="3.2" stroke="currentColor"/></svg>
+          </div>
+          <h3>Wedding Stories</h3>
+          <p>Full-day coverage with a calm, candid-first approach. Timelines, family formals, and fresh frames.</p>
+        </div>
+        <div class="card glass reveal">
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="currentColor"/><path d="M8 10h8M8 14h5" stroke="currentColor"/></svg>
+          </div>
+          <h3>Editorial Portraits</h3>
+          <p>Clean, modern portrait sessions—studio or location. Direction to help you feel natural and look iconic.</p>
+        </div>
+        <div class="card glass reveal">
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 8h18" stroke="currentColor"/><path d="M7 8v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8" stroke="currentColor"/></svg>
+          </div>
+          <h3>Brand & Product</h3>
+          <p>Minimal product storytelling for brands that value clarity, texture, and tone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card glass reveal">
+          <h2>Let’s Create</h2>
+          <p>Tell me about your vision. I’ll reply with a tailored plan and quote.</p>
+          <form id="contactForm" novalidate>
+            <div class="row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required placeholder="Your full name" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required placeholder="you@example.com" />
+              </label>
+            </div>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="What are we shooting?"></textarea>
+            </label>
+            <div class="row between">
+              <label class="checkbox">
+                <input type="checkbox" name="terms" required />
+                <span>I agree to the terms.</span>
+              </label>
+              <button type="submit" class="btn primary">Send Message</button>
+            </div>
+            <p id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <p>© <span id="year"></span> NovaFrame • Built with love & light.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
