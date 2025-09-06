@@ -1,9 +1,0 @@
-body {margin:0;font-family:Arial;background:#031025;color:#e8f6ff;}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);}
-nav a{color:#a6c7df;margin:0 10px;text-decoration:none;}
-nav a:hover{color:#fff;}
-.page{display:none;padding:20px;animation:fadeIn .5s ease both;}
-.page.active{display:block;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
-footer{text-align:center;padding:20px;color:#a6c7df;}

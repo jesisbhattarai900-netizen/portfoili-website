@@ -1,63 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Arctic Lens — Photographer Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaFrame — Photography Portfolio</title>
+  <meta name="description" content="Photography portfolio with albums, navy-blue theme and glassmorphism." />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <img src="assets/images/logo.png" alt="Logo" style="max-width:100%;height:auto;" />
-        </div>
-        <div>
-          <div class="title">Arctic Lens</div>
-          <div class="subtitle">Fine Art & Commercial Photography</div>
-        </div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="nav glass" id="top">
+    <a class="brand" href="#top">NovaFrame</a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#albums">Albums</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero section">
+    <div class="hero-content glass reveal">
+      <h1>Crafting Time <span class="accent">Into Frames</span></h1>
+      <p>Hi, I’m <strong>Jesis</strong> — a modern wedding & lifestyle photographer.</p>
+      <div class="hero-cta">
+        <a href="#albums" class="btn primary">View Albums</a>
+        <a href="#contact" class="btn ghost">Book a Shoot</a>
       </div>
-      <nav>
-        <a href="#home" data-route>Home</a>
-        <a href="#gallery" data-route>Gallery</a>
-        <a href="#pricing" data-route>Pricing</a>
-        <a href="#contact" data-route>Contact</a>
-      </nav>
-    </header>
+    </div>
+  </section>
 
-    <!-- Sections -->
-    <section id="home" class="page active">
-      <h1>Capture the moment. Craft the story.</h1>
-      <p>Replace sample text and images in <code>assets/images</code> with your own.</p>
-    </section>
+  <section id="albums" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Photo Albums</h2>
+        <p>Explore curated collections of my work.</p>
+      </div>
+      <div class="grid-gallery">
+        <a href="albums/wedding.html" class="card glass album-card reveal">
+          <img src="assets/placeholder-1.jpg" alt="Wedding Album" />
+          <h3>Wedding Stories</h3>
+        </a>
+        <a href="albums/portrait.html" class="card glass album-card reveal">
+          <img src="assets/placeholder-5.jpg" alt="Portrait Album" />
+          <h3>Portrait Sessions</h3>
+        </a>
+        <a href="albums/travel.html" class="card glass album-card reveal">
+          <img src="assets/placeholder-3.jpg" alt="Travel Album" />
+          <h3>Travel Adventures</h3>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="gallery" class="page">
-      <h2>Gallery</h2>
-      <div id="galleryGrid" class="grid"></div>
-    </section>
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-card glass reveal">
+        <h2>Let’s Create</h2>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+        <p><a href="https://wa.me/9779800000000" target="_blank">Chat on WhatsApp</a></p>
+      </div>
+    </div>
+  </section>
 
-    <section id="pricing" class="page">
-      <h2>Pricing</h2>
-      <div class="pricing-grid"></div>
-    </section>
+  <footer class="footer glass">
+    <p>© <span id="year"></span> NovaFrame • Built with love & light.</p>
+  </footer>
 
-    <section id="contact" class="page">
-      <h2>Contact</h2>
-      <form>
-        <input placeholder="Your name" />
-        <input placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-        <a href="https://wa.me/977XXXXXXXXXX" target="_blank">WhatsApp</a>
-      </form>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Arctic Lens
-    </footer>
-  </div>
-
-  <script src="assets/js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
