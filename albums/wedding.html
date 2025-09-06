@@ -1,43 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wedding Album — NovaFrame</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding Stories — NovaFrame</title>
+  <meta name="description" content="Full-day wedding coverage — editorial and cinematic." />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header class="nav glass">
-    <a class="brand" href="../index.html">NovaFrame</a>
-    <nav class="nav-links">
-      <a href="../index.html#albums">Albums</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
+  <a class="whatsapp-fab" href="https://wa.me/9779800000000" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M20.52 3.48A11.9 11.9 0 0012 .5 11.9 11.9 0 003.48 3.48 12 12 0 001.1 14.9L1 18l3.2-.84A11.94 11.94 0 0012 23.5c3.18 0 6.15-1.24 8.39-3.48A11.9 11.9 0 0023.5 12 11.9 11.9 0 0020.52 3.48z"></path></svg>
+  </a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">NovaFrame</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#albums">Albums</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Wedding Album</h2>
-          <p>A collection of wedding moments.</p>
-        </div>
-        <div class="grid-gallery">
-          <figure class="card glass gallery-item reveal"><img src="../assets/placeholder-1.jpg" alt="Wedding 1" /><figcaption>Wedding 1</figcaption></figure><figure class="card glass gallery-item reveal"><img src="../assets/placeholder-4.jpg" alt="Wedding 4" /><figcaption>Wedding 4</figcaption></figure><figure class="card glass gallery-item reveal"><img src="../assets/placeholder-7.jpg" alt="Wedding 7" /><figcaption>Wedding 7</figcaption></figure>
-        </div>
-      </div>
-    </section>
+
+  <main class="container section">
+    <div class="section-head">
+      <h2>Wedding Stories</h2>
+      <p>Full-day wedding coverage — editorial and cinematic.</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery" data-album="wedding">
+      <button class="gallery-item" data-index="1" data-src="../assets/placeholder-1.jpg" data-caption="Golden Vows" aria-label="Golden Vows"><img src="../assets/placeholder-1.jpg" alt="Golden Vows"><div class="caption">Golden Vows</div></button>\n<button class="gallery-item" data-index="2" data-src="../assets/placeholder-4.jpg" data-caption="First Dance" aria-label="First Dance"><img src="../assets/placeholder-4.jpg" alt="First Dance"><div class="caption">First Dance</div></button>\n<button class="gallery-item" data-index="3" data-src="../assets/placeholder-7.jpg" data-caption="Veil Light" aria-label="Veil Light"><img src="../assets/placeholder-7.jpg" alt="Veil Light"><div class="caption">Veil Light</div></button>\n<button class="gallery-item" data-index="4" data-src="../assets/placeholder-10.jpg" data-caption="Portrait with Light" aria-label="Portrait with Light"><img src="../assets/placeholder-10.jpg" alt="Portrait with Light"><div class="caption">Portrait with Light</div></button>\n<button class="gallery-item" data-index="5" data-src="../assets/placeholder-11.jpg" data-caption="Ceremony Detail" aria-label="Ceremony Detail"><img src="../assets/placeholder-11.jpg" alt="Ceremony Detail"><div class="caption">Ceremony Detail</div></button>
+    </div>
   </main>
 
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img id="lightboxImg" src="" alt="">
-    <p id="lightboxCaption"></p>
+  <!-- Lightbox / slider -->
+  <div id="galleryLightbox" class="lightbox-slider" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous">&#10094;</button>
+    <div class="lb-stage">
+      <img id="lbImage" src="" alt="">
+      <p id="lbCaption" class="lb-caption"></p>
+    </div>
+    <button class="lb-next" aria-label="Next">&#10095;</button>
   </div>
 
-  <footer class="footer glass">
-    <p>© <span id="year"></span> NovaFrame • Built with love & light.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> NovaFrame — All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
