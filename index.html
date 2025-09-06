@@ -1,68 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Photography Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arctic Lens — Photographer Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="nav glass">
-    <a href="index.html" class="brand">My Studio</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="album.html">Albums</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero glass">
-    <h1>Capturing Moments</h1>
-    <p>Turning your special days into timeless frames.</p>
-  </section>
-
-  <section class="section">
-    <h2>Pricing Packages</h2>
-    <div class="pricing-grid">
-      <div class="pricing-card glass">
-        <h3>Basic</h3>
-        <p class="price">$299</p>
-        <ul>
-          <li>4 Hours Coverage</li>
-          <li>100 Edited Photos</li>
-          <li>Online Gallery</li>
-        </ul>
-        <a href="contact.html" class="btn">Book Now</a>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo" style="max-width:100%;height:auto;" />
+        </div>
+        <div>
+          <div class="title">Arctic Lens</div>
+          <div class="subtitle">Fine Art & Commercial Photography</div>
+        </div>
       </div>
-      <div class="pricing-card glass highlight">
-        <h3>Premium</h3>
-        <p class="price">$599</p>
-        <ul>
-          <li>8 Hours Coverage</li>
-          <li>300 Edited Photos</li>
-          <li>1 Highlight Video</li>
-          <li>Album Print</li>
-        </ul>
-        <a href="contact.html" class="btn">Book Now</a>
-      </div>
-      <div class="pricing-card glass">
-        <h3>Luxury</h3>
-        <p class="price">$999</p>
-        <ul>
-          <li>Full Day Coverage</li>
-          <li>500+ Edited Photos</li>
-          <li>Drone Shots</li>
-          <li>Premium Album + USB</li>
-        </ul>
-        <a href="contact.html" class="btn">Book Now</a>
-      </div>
-    </div>
-  </section>
+      <nav>
+        <a href="#home" data-route>Home</a>
+        <a href="#gallery" data-route>Gallery</a>
+        <a href="#pricing" data-route>Pricing</a>
+        <a href="#contact" data-route>Contact</a>
+      </nav>
+    </header>
 
-  <footer class="footer glass">
-    <p>© 2025 My Studio</p>
-  </footer>
+    <!-- Sections -->
+    <section id="home" class="page active">
+      <h1>Capture the moment. Craft the story.</h1>
+      <p>Replace sample text and images in <code>assets/images</code> with your own.</p>
+    </section>
 
-  <script src="js/main.js"></script>
+    <section id="gallery" class="page">
+      <h2>Gallery</h2>
+      <div id="galleryGrid" class="grid"></div>
+    </section>
+
+    <section id="pricing" class="page">
+      <h2>Pricing</h2>
+      <div class="pricing-grid"></div>
+    </section>
+
+    <section id="contact" class="page">
+      <h2>Contact</h2>
+      <form>
+        <input placeholder="Your name" />
+        <input placeholder="Email" />
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+        <a href="https://wa.me/977XXXXXXXXXX" target="_blank">WhatsApp</a>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Arctic Lens
+    </footer>
+  </div>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
