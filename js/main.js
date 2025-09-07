@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(el) el.textContent = new Date().getFullYear();
   });
 
-  // Albums definition (album folder => display name)
+  // Albums definition
   const albums = {
     wedding: "Wedding",
     prewedding: "Pre-wedding",
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     corporate: "Corporate"
   };
 
-  // Each album has images named cover.jpg and img1.jpg ... img10.jpg
   const albumGrid = document.getElementById('albumGrid');
   const lightbox = document.getElementById('lightbox');
   const track = document.getElementById('track');
@@ -27,25 +26,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if(albumGrid){
     Object.entries(albums).forEach(([folder, title]) => {
-      const card = document.createElement('div');
-      card.className = 'album-card';
-      card.innerHTML = `
-        <div class="album-cover">
-          <img src="assets/gallery/${folder}/cover.jpg" alt="${title} cover">
-          <div class="album-title">${title}</div>
-        </div>
-      `;
-      card.addEventListener('click', () => openAlbum(folder, title));
-      albumGrid.appendChild(card);
+      // Automatically find the first existing image (to use as cover)
+      findImages(folder, (images) => {
+        if(images.length === 0) return; // no images found
+        const cover = images[0];
+
+        const card = document.createElement('div');
+        card.className = 'album-card';
+        card.innerHTML = `
+          <div class="album-cover">
+            <img src="${cover}" alt="${title} cover">
+            <div class="album-title">${title}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => openAlbum(images));
+        albumGrid.appendChild(card);
+      });
     });
   }
 
-  function openAlbum(folder, title){
-    currentAlbum = folder;
-    albumImages = [];
-    for(let i=1; i<=12; i++){
-      albumImages.push(`assets/gallery/${folder}/img${i}.jpg`);
+  function findImages(folder, callback){
+    const images = [];
+    let i = 1;
+
+    function tryLoad(){
+      const img = new Image();
+      img.src = `assets/gallery/${folder}/img${i}.jpg`;
+
+      img.onload = () => {
+        images.push(img.src);
+        i++;
+        tryLoad(); // keep checking next image
+      };
+      img.onerror = () => {
+        callback(images); // stop when no more images
+      };
     }
+
+    tryLoad();
+  }
+
+  function openAlbum(images){
+    currentAlbum = images;
+    albumImages = images;
     openLightbox(0);
   }
 
