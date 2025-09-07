@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openAlbum(folder, title){
     currentAlbum = folder;
     albumImages = [];
-    for(let i=1; i<=10; i++){
+    for(let i=1; i<=12; i++){
       albumImages.push(`assets/gallery/${folder}/img${i}.jpg`);
     }
     openLightbox(0);
