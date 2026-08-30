@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frames by Jesh — Photography • Films • Editing</title>
+<meta name="description" content="Frames by Jesh — 7+ years of photography, wedding films, photo editing and video editing in Nepal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--black:#0B0B0B;--glass:rgba(255,255,255,.05);--border:rgba(255,255,255,.12);--muted:rgba(255,255,255,.58);--gold:#d9b36c}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;background:#0B0B0B}
+body{background:radial-gradient(circle at 10% 20%,rgba(109,74,255,.12),transparent 28%),radial-gradient(circle at 90% 40%,rgba(0,169,130,.09),transparent 25%),radial-gradient(circle at 50% 90%,rgba(217,179,108,.08),transparent 30%),#0B0B0B;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
+::selection{background:rgba(217,179,108,.35)}
+.glass{background:rgba(255,255,255,.05);border:1px solid var(--border);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 20px 70px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.04)}
+.glass-hover{transition:.45s cubic-bezier(.16,1,.3,1)}.glass-hover:hover{transform:translateY(-6px);background:rgba(255,255,255,.075);border-color:rgba(255,255,255,.22);box-shadow:0 30px 100px rgba(0,0,0,.5)}
+.mesh{position:fixed;inset:0;pointer-events:none;z-index:-2;overflow:hidden}.mesh span{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(120px);opacity:.16;animation:float 15s infinite alternate ease-in-out}.violet{background:#6d4aff;top:-150px;left:-100px}.emerald{background:#00a982;right:-150px;top:30%;animation-delay:-5s}.amber{background:#d9b36c;bottom:-200px;left:35%;animation-delay:-9s}@keyframes float{to{transform:translate(80px,-50px) scale(1.2)}}
+.cursor-dot{position:fixed;width:7px;height:7px;border-radius:50%;background:#fff;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}.cursor-ring{position:fixed;width:35px;height:35px;border:1px solid rgba(255,255,255,.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+.nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 30px));z-index:1000;padding:12px 15px;border-radius:22px}.nav-link{color:rgba(255,255,255,.6);font-size:12px;text-transform:uppercase;letter-spacing:.16em;transition:.3s}.nav-link:hover{color:#fff}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}.hero-media,.hero-overlay{position:absolute;inset:0}.hero-media video{width:100%;height:100%;object-fit:cover;filter:brightness(.42) saturate(.8)}.hero-overlay{background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55) 45%,rgba(0,0,0,.2)),linear-gradient(0deg,#0B0B0B,transparent 38%)}.hero-content{position:relative;z-index:3;padding-top:100px}.eyebrow,.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.25em}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,.65)}.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 15px var(--gold)}.hero-title,.section-title{font-family:Sora,sans-serif}.hero-title{font-size:clamp(3.3rem,8vw,8rem);line-height:.95;letter-spacing:-.065em;max-width:1000px}.hero-title span{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.7)}.hero-description,.section-description{color:var(--muted);line-height:1.8;max-width:620px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;transition:.3s}.btn-primary{background:#fff;color:#0B0B0B}.btn-glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(12px)}.btn:hover{transform:translateY(-3px)}
+.contact-orbit{position:absolute;right:5%;bottom:10%;z-index:10}.contact-main{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}.contact-menu{position:absolute;right:75px;bottom:0;display:flex;gap:8px;opacity:0;transform:translateX(25px);pointer-events:none;transition:.4s}.contact-orbit:hover .contact-menu{opacity:1;transform:translateX(0);pointer-events:auto}.contact-option{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px}
+section{position:relative;padding:130px 0}.section-label{color:var(--gold)}.section-title{font-size:clamp(2.4rem,5vw,5rem);line-height:1;letter-spacing:-.05em}
+.gallery-grid{columns:3 280px;column-gap:18px}.photo-card{position:relative;break-inside:avoid;margin-bottom:18px;overflow:hidden;border-radius:24px;background:#151515;cursor:pointer}.photo-card img{display:block;width:100%;height:auto;min-height:260px;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}.photo-card:hover img{transform:scale(1.05)}.photo-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 60%);opacity:.75}.photo-info{position:absolute;left:20px;right:20px;bottom:18px}.photo-info small{color:var(--gold);font-size:9px;text-transform:uppercase;letter-spacing:.2em}.photo-info h3{font-family:Sora;font-size:18px;margin-top:5px}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-card{position:relative;overflow:hidden;border-radius:26px;aspect-ratio:16/9;cursor:pointer}.video-card img{width:100%;height:100%;object-fit:cover;transition:.8s}.video-card:hover img{transform:scale(1.06)}.video-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 65%)}.play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(15px);display:flex;align-items:center;justify-content:center;transition:.3s}.video-card:hover .play{transform:translate(-50%,-50%) scale(1.1);background:rgba(255,255,255,.2)}.video-info{position:absolute;z-index:3;left:24px;right:24px;bottom:22px}.video-info small{color:var(--gold);font-size:9px;text-transform:uppercase;letter-spacing:.2em}
+.showreel{position:relative;overflow:hidden;border-radius:32px;aspect-ratio:21/9;min-height:430px}.showreel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.48)}.showreel-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.15)),linear-gradient(0deg,rgba(0,0,0,.8),transparent 60%)}.showreel-content{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(25px,6vw,70px)}
+.timeline{position:relative}.timeline:before{content:"";position:absolute;left:19px;top:0;bottom:0;width:1px;background:rgba(255,255,255,.12)}.timeline-item{position:relative;padding-left:65px;margin-bottom:55px}.timeline-dot{position:absolute;left:10px;top:5px;width:19px;height:19px;border-radius:50%;background:#0B0B0B;border:1px solid rgba(255,255,255,.4)}.timeline-year{color:var(--gold);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.comparison{position:relative;overflow:hidden;border-radius:25px;height:550px;user-select:none;touch-action:none}.comparison img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.comparison-before{clip-path:inset(0 50% 0 0)}.comparison-slider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;cursor:ew-resize}.comparison-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:45px;height:45px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center}
+.contact-card{position:relative;overflow:hidden;border-radius:35px;padding:clamp(35px,7vw,80px)}.contact-glow{position:absolute;width:350px;height:350px;border-radius:50%;background:rgba(109,74,255,.15);filter:blur(100px);right:-100px;bottom:-150px}.contact-link{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1)}.copy-btn{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.modal{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.88);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.35s}.modal.open{opacity:1;pointer-events:auto}.modal-content{width:min(1100px,100%);border-radius:25px;overflow:hidden;transform:scale(.95);transition:.4s}.modal.open .modal-content{transform:scale(1)}
+@media(max-width:800px){.cursor-dot,.cursor-ring{display:none}.nav{top:10px;border-radius:17px}.nav-links{display:none}.hero-title{font-size:clamp(3.1rem,15vw,5rem)}section{padding:90px 0}.contact-orbit{right:20px;bottom:30px}.contact-menu{right:65px;flex-direction:column}.video-grid{grid-template-columns:1fr}.showreel{aspect-ratio:16/10;min-height:400px}.gallery-grid{columns:2 160px}}
+</style>
+</head>
+<body>
+<div class="mesh"><span class="violet"></span><span class="emerald"></span><span class="amber"></span></div>
+<div class="cursor-dot"></div><div class="cursor-ring"></div>
+
+<nav class="nav glass"><div class="flex items-center justify-between">
+<a href="#home" class="font-semibold tracking-tight text-lg" style="font-family:Sora">Frames<span style="color:#d9b36c">.</span></a>
+<div class="nav-links flex items-center gap-8"><a class="nav-link" href="#photos">Photos</a><a class="nav-link" href="#films">Films</a><a class="nav-link" href="#editing">Editing</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#contact">Contact</a></div>
+<a href="https://www.instagram.com/frames_byjesh/" target="_blank" class="btn btn-glass" style="min-height:40px;padding:0 16px">Instagram</a>
+</div></nav>
+
+<main>
+<section id="home" class="hero">
+<div class="hero-media">
+<video autoplay muted loop playsinline preload="auto" poster="assets/images/hero_poster.jpg">
+<source src="assets/videos/hero-reel.mp4" type="video/mp4">
+</video></div>
+<div class="hero-overlay"></div>
+<div class="container mx-auto px-6 hero-content">
+<div class="eyebrow mb-7"><span class="eyebrow-dot"></span>Photographer · Editor · Filmmaker · Nepal</div>
+<h1 class="hero-title mb-8">Capturing<br><span>Timeless</span> Stories.</h1>
+<p class="hero-description mb-9">7+ years of turning real moments into cinematic visual experiences — from wedding photography and films to professional photo and video editing.</p>
+<div class="flex flex-wrap gap-3"><a href="#photos" class="btn btn-primary">Explore Photography ↗</a><a href="#showreel" class="btn btn-glass">Watch Showreel ▶</a></div>
+</div>
+<div class="absolute bottom-10 right-6 md:right-32 z-10 flex gap-2"><a href="#photos" class="glass rounded-full px-5 py-3 text-[10px] uppercase tracking-widest">Scroll to explore ↓</a></div>
+<div class="contact-orbit"><div class="contact-menu"><a href="tel:+9779848645139" class="contact-option glass">☎</a><a href="https://wa.me/9779848645139" target="_blank" class="contact-option glass">WA</a><a href="mailto:editsbyjesh@gmail.com" class="contact-option glass">@</a><a href="https://www.instagram.com/frames_byjesh/" target="_blank" class="contact-option glass">IG</a></div><div class="contact-main glass">✦</div></div>
+</section>
+
+<section><div class="container mx-auto px-6"><div class="grid lg:grid-cols-3 gap-5">
+<div class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-3">7<span style="color:#d9b36c">+</span></div><div class="text-xs uppercase tracking-widest text-white/50">Years Experience</div></div>
+<div class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-3">15</div><div class="text-xs uppercase tracking-widest text-white/50">Started Creating At</div></div>
+<div class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-3">∞</div><div class="text-xs uppercase tracking-widest text-white/50">Stories To Tell</div></div>
+</div></div></section>
+
+<section id="photos"><div class="container mx-auto px-6">
+<div class="mb-12"><div class="section-label mb-5">01 — Photography</div><div class="flex flex-col lg:flex-row lg:items-end justify-between gap-7"><h2 class="section-title">Wedding<br>Photography.</h2><p class="section-description">A separate collection of timeless wedding photographs — 12 dedicated image spaces ready for your real work.</p></div></div>
+<div class="gallery-grid">
+<div class="photo-card glass"><img src="assets/images/photo_01.jpg" alt="Wedding photograph 01" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>01 — The Beginning</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_02.jpg" alt="Wedding photograph 02" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>02 — The Quiet Moment</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_03.jpg" alt="Wedding photograph 03" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>03 — Forever Begins</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_04.jpg" alt="Wedding photograph 04" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>04 — In The Moment</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_05.jpg" alt="Wedding photograph 05" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>05 — Golden Hour</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_06.jpg" alt="Wedding photograph 06" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>06 — The Vows</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_07.jpg" alt="Wedding photograph 07" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>07 — Together</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_08.jpg" alt="Wedding photograph 08" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>08 — After The Vows</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_09.jpg" alt="Wedding photograph 09" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>09 — Celebration</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_10.jpg" alt="Wedding photograph 10" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>10 — A New Chapter</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_11.jpg" alt="Wedding photograph 11" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>11 — The Details</h3></div></div>
+<div class="photo-card glass"><img src="assets/images/photo_12.jpg" alt="Wedding photograph 12" loading="lazy"><div class="photo-overlay"></div><div class="photo-info"><small>Wedding Photography</small><h3>12 — Timeless</h3></div></div>
+</div>
+</div></section>
+
+<section id="films"><div class="container mx-auto px-6">
+<div class="mb-12"><div class="section-label mb-5">02 — Wedding Films</div><div class="flex flex-col lg:flex-row lg:items-end justify-between gap-7"><h2 class="section-title">Stories<br>in motion.</h2><p class="section-description">A collection of cinematic wedding films, crafted to preserve every emotion, detail, and unforgettable moment.</p></div></div>
+<div class="video-grid">
+<div class="video-card glass" onclick="openVideo('DwMidd87zGY')"><img src="assets/images/video_01.jpg" alt="Wedding film 01" loading="lazy"><div class="play">▶</div><div class="video-info"><small>Wedding Film 01</small><h3 class="font-semibold text-xl mt-1">A Cinematic Beginning</h3></div></div>
+<div class="video-card glass" onclick="openVideo('m-09KlCuMMM')"><img src="assets/images/video_02.jpg" alt="Wedding film 02" loading="lazy"><div class="play">▶</div><div class="video-info"><small>Wedding Film 02</small><h3 class="font-semibold text-xl mt-1">Between The Frames</h3></div></div>
+<div class="video-card glass" onclick="openVideo('8DfRybX_B9g')"><img src="assets/images/video_03.jpg" alt="Wedding film 03" loading="lazy"><div class="play">▶</div><div class="video-info"><small>Wedding Film 03</small><h3 class="font-semibold text-xl mt-1">The Vows</h3></div></div>
+<div class="video-card glass" onclick="openVideo('GwoUZKCi21s')"><img src="assets/images/video_04.jpg" alt="Wedding film 04" loading="lazy"><div class="play">▶</div><div class="video-info"><small>Wedding Film 04</small><h3 class="font-semibold text-xl mt-1">Forever In Motion</h3></div></div>
+<div class="video-card glass" onclick="openVideo('_Qx2KtNIvv0')"><img src="assets/images/video_05.jpg" alt="Wedding film 05" loading="lazy"><div class="play">▶</div><div class="video-info"><small>Wedding Film 05</small><h3 class="font-semibold text-xl mt-1">Golden Hour</h3></div></div>
+<div class="video-card glass" onclick="openVideo('bjVPFRWqfB4')"><img src="assets/images/video_06.jpg" alt="Wedding film 06" loading="lazy"><div class="play">▶</div><div class="video-info"><small>Wedding Film 06</small><h3 class="font-semibold text-xl mt-1">A Story To Keep</h3></div></div>
+</div>
+</div></section>
+
+<section id="showreel"><div class="container mx-auto px-6">
+<div class="mb-10"><div class="section-label mb-5">03 — Showreel</div><h2 class="section-title">The complete<br>visual language.</h2></div>
+<div class="showreel glass"><video autoplay muted loop playsinline controls poster="assets/images/showreel_poster.jpg"><source src="assets/videos/showreel.mp4" type="video/mp4"></video><div class="showreel-overlay"></div><div class="showreel-content"><div class="section-label mb-5">Frames by Jesh — Showreel</div><h3 class="font-semibold text-4xl md:text-6xl max-w-3xl" style="font-family:Sora">Light. Emotion.<br>Motion. Memory.</h3><p class="text-white/60 max-w-xl mt-6 leading-7">A cinematic showcase of photography, wedding films, editing and visual storytelling.</p></div></div>
+</div></section>
+
+<section id="editing"><div class="container mx-auto px-6"><div class="mb-12"><div class="section-label mb-5">04 — Post Production</div><h2 class="section-title mb-6">From raw<br>to refined.</h2><p class="section-description">Professional editing that transforms the foundation of an image into a finished visual experience.</p></div>
+<div class="comparison glass" id="comparison"><img src="assets/images/editing_after.jpg" alt="Edited photograph"><img class="comparison-before" src="assets/images/editing_before.jpg" alt="Before editing"><div class="comparison-slider" id="comparisonSlider"><div class="comparison-handle">↔</div></div></div></div></section>
+
+<section id="about"><div class="container mx-auto px-6"><div class="grid lg:grid-cols-2 gap-14 items-start">
+<div class="lg:sticky lg:top-32"><div class="section-label mb-5">05 — The Journey</div><h2 class="section-title mb-7">Seven years.<br>One vision.</h2><p class="section-description">What started at the age of 15 as a fascination with visual storytelling evolved into a professional pursuit of photography, filmmaking and post-production.</p></div>
+<div class="glass rounded-3xl p-8 md:p-12"><div class="timeline">
+<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">The Beginning</div><h3 class="font-semibold text-2xl mt-2 mb-3">Age 15 — First Frames</h3><p class="text-white/55 leading-7 text-sm">The journey began with curiosity, experimentation and a camera. Every frame became a lesson.</p></div>
+<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Growth</div><h3 class="font-semibold text-2xl mt-2 mb-3">Discovering Storytelling</h3><p class="text-white/55 leading-7 text-sm">Photography evolved from simply capturing images into understanding light, emotion, composition and story.</p></div>
+<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Expansion</div><h3 class="font-semibold text-2xl mt-2 mb-3">Films & Post Production</h3><p class="text-white/55 leading-7 text-sm">Motion became part of the language. Editing, color, sound and cinematic pacing became equally important.</p></div>
+<div class="timeline-item mb-0"><div class="timeline-dot"></div><div class="timeline-year">Today</div><h3 class="font-semibold text-2xl mt-2 mb-3">Frames by Jesh</h3><p class="text-white/55 leading-7 text-sm">Today the focus is simple: create visuals that feel as powerful years later as they did in the moment.</p></div>
+</div></div></div></div></section>
+
+<section><div class="container mx-auto px-6"><div class="section-label mb-5">06 — Capabilities</div><h2 class="section-title mb-12">What I create.</h2><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="glass glass-hover rounded-3xl p-7"><div class="text-3xl mb-8">◉</div><h3 class="font-semibold text-xl mb-3">Photography</h3><p class="text-sm text-white/50 leading-7">Authentic wedding photography focused on emotion, light and story.</p></div>
+<div class="glass glass-hover rounded-3xl p-7"><div class="text-3xl mb-8">▶</div><h3 class="font-semibold text-xl mb-3">Wedding Films</h3><p class="text-sm text-white/50 leading-7">Cinematic wedding films designed to preserve the feeling of the day.</p></div>
+<div class="glass glass-hover rounded-3xl p-7"><div class="text-3xl mb-8">✦</div><h3 class="font-semibold text-xl mb-3">Photo Editing</h3><p class="text-sm text-white/50 leading-7">High-end retouching, color grading and professional image finishing.</p></div>
+<div class="glass glass-hover rounded-3xl p-7"><div class="text-3xl mb-8">◌</div><h3 class="font-semibold text-xl mb-3">Video Editing</h3><p class="text-sm text-white/50 leading-7">Story-driven edits, cinematic pacing, color and finishing.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="container mx-auto px-6"><div class="contact-card glass"><div class="contact-glow"></div><div class="relative z-10">
+<div class="section-label mb-6">07 — Let's Create</div><h2 class="section-title mb-7">Have a story<br>worth capturing?</h2><p class="section-description mb-12">Whether you're planning a wedding, building a visual campaign or need professional post-production — let's create something timeless.</p>
+<div class="max-w-2xl">
+<div class="contact-link"><div><div class="text-[9px] uppercase tracking-[.25em] text-white/35 mb-2">Email</div><div class="text-sm md:text-base">editsbyjesh@gmail.com</div></div><button class="copy-btn glass" onclick="copyText('editsbyjesh@gmail.com',this)">⧉</button></div>
+<div class="contact-link"><div><div class="text-[9px] uppercase tracking-[.25em] text-white/35 mb-2">Call / WhatsApp</div><div class="text-sm md:text-base">+977 9848645139</div></div><button class="copy-btn glass" onclick="copyText('+9779848645139',this)">⧉</button></div>
+<div class="contact-link"><div><div class="text-[9px] uppercase tracking-[.25em] text-white/35 mb-2">Instagram</div><div class="text-sm md:text-base">@frames_byjesh</div></div><a href="https://www.instagram.com/frames_byjesh/" target="_blank" class="copy-btn glass">↗</a></div>
+</div><div class="flex flex-wrap gap-3 mt-10"><a href="mailto:editsbyjesh@gmail.com" class="btn btn-primary">Email Me</a><a href="https://wa.me/9779848645139" target="_blank" class="btn btn-glass">WhatsApp</a></div>
+</div></div></div></section>
+</main>
+
+<footer class="pb-10"><div class="container mx-auto px-6"><div class="glass rounded-3xl p-6 flex flex-col md:flex-row justify-between items-center gap-4"><div class="font-semibold" style="font-family:Sora">Frames<span style="color:#d9b36c">.</span></div><div class="text-[10px] uppercase tracking-[.2em] text-white/35">© 2026 Frames by Jesh · Nepal</div><a href="https://www.instagram.com/frames_byjesh/" target="_blank" class="text-xs text-white/55 hover:text-white">@frames_byjesh</a></div></div></footer>
+
+<div class="modal" id="videoModal" onclick="closeVideo(event)"><div class="modal-content glass"><div class="flex justify-end p-3"><button onclick="closeVideo()" class="glass rounded-full w-10 h-10">×</button></div><div class="aspect-video"><iframe id="videoFrame" class="w-full h-full" src="" title="Wedding film" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></div></div>
+
+<script>
+const dot=document.querySelector('.cursor-dot'),ring=document.querySelector('.cursor-ring');let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});(function cursor(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(cursor)})();
+document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('mousemove',e=>{let r=b.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;b.style.transform=`translate(${x*.08}px,${y*.08}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+const comp=document.getElementById('comparison'),before=document.querySelector('.comparison-before'),slider=document.getElementById('comparisonSlider');let dragging=false;
+function updateComparison(x){let r=comp.getBoundingClientRect(),p=Math.max(0,Math.min(100,((x-r.left)/r.width)*100));before.style.clipPath=`inset(0 ${100-p}% 0 0)`;slider.style.left=p+'%'}
+comp.addEventListener('pointerdown',e=>{dragging=true;comp.setPointerCapture(e.pointerId);updateComparison(e.clientX)});comp.addEventListener('pointermove',e=>{if(dragging)updateComparison(e.clientX)});comp.addEventListener('pointerup',()=>dragging=false);
+async function copyText(t,b){try{await navigator.clipboard.writeText(t);let o=b.innerHTML;b.innerHTML='✓';setTimeout(()=>b.innerHTML=o,1200)}catch{alert('Copy failed. Please copy manually.')}}
+const modal=document.getElementById('videoModal'),frame=document.getElementById('videoFrame');function openVideo(id){frame.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';modal.classList.add('open');document.body.style.overflow='hidden'}function closeVideo(e){if(e&&e.target!==modal)return;modal.classList.remove('open');frame.src='';document.body.style.overflow=''}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo()});
+</script>
+</body>
+</html>
